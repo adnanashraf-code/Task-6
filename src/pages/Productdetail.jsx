@@ -31,13 +31,17 @@ const Productdetail = () => {
     <div className="min-h-screen bg-black text-white flex justify-center items-center p-6">
       <div
         className="
-          w-[350px]
-          bg-white
-          text-black
-          rounded-2xl
-          p-6
-          shadow-lg
-        "
+    w-[350px]
+    h-[700px]
+    bg-white
+    text-black
+    rounded-2xl
+    p-6
+    shadow-lg
+    flex
+    flex-col
+    justify-between
+  "
       >
         <img
           className="h-72 w-full object-contain"
@@ -51,7 +55,15 @@ const Productdetail = () => {
           ₹ {selectedData.price}
         </p>
 
-        <p className="mt-4 text-gray-600 text-sm leading-6">
+        <p
+          className="
+    mt-4
+    text-gray-600
+    text-sm
+    leading-6
+    line-clamp-3
+  "
+        >
           {selectedData.description}
         </p>
 
