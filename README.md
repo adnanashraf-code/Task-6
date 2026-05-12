@@ -1,16 +1,68 @@
-# React + Vite
+# KRAFT. - Modern E-Commerce Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, fully responsive E-commerce application built with React, Vite, and Tailwind CSS v4. This project demonstrates a clean architecture, dynamic data fetching from FakeStoreAPI, and state management using React Context API.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+The project is optimized for deployment on **Vercel**. Ensure all dependencies are pushed to your repository for a successful build.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **Modern UI/UX**: Premium dark-themed design with emerald accents and glassmorphism effects.
+- **Fully Responsive**: Optimized for all screen sizes from mobile (320px+) to large desktops.
+- **Dynamic Product Catalog**: Fetches products in real-time with randomized limits for a fresh experience.
+- **Product Details**: Dedicated pages for each product with detailed descriptions and pricing.
+- **State Management**: Centralized data handling using React Context API (`UsercontextProvider`).
+- **Smooth Navigation**: Client-side routing implemented with `react-router-dom`.
+- **Sorting & Refresh**: Ability to sort products by price and refresh the catalog with new data.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 19, Vite
+- **Styling**: Tailwind CSS v4 (Modern Engine)
+- **Networking**: Axios
+- **Routing**: React Router v6
+- **API**: [FakeStoreAPI](https://fakestoreapi.com/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+
+```text
+src/
+├── api/              # API service functions (Axios)
+├── assets/           # Static assets and images
+├── context/          # React Context for global state
+├── pages/            # Page components (Home, Products, ProductDetail)
+├── App.jsx           # Main application router
+└── main.jsx          # Entry point
+```
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/adnanashraf-code/Task-6.git
+   cd Task-6/task-6
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## 🔧 Recent Fixes
+
+- **Vercel Build Fix**: Added missing `tailwindcss` and `@tailwindcss/vite` dependencies to `package.json`.
+- **Responsiveness**: Adjusted heading sizes, paddings, and grid layouts to ensure perfect fit on mobile devices (320px screens).
+- **Clean Code**: Removed redundant components and optimized the file structure.
+
+---
+Developed with ❤️ by Adnan.
