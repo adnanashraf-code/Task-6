@@ -1,4 +1,4 @@
-# KRAFT. - Modern E-Commerce Experience
+# ShopVista - Modern E-Commerce Experience
 
 A premium, fully responsive E-commerce application built with React, Vite, and Tailwind CSS v4. This project demonstrates a clean architecture, dynamic data fetching from FakeStoreAPI, and state management using React Context API.
 
