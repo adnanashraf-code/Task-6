@@ -20,7 +20,9 @@ const Products = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-black flex justify-center items-center">
-        <h1 className="text-white text-4xl font-bold">Loading...</h1>
+        <h1 className="text-white text-5xl font-black animate-pulse">
+          Loading...
+        </h1>
       </div>
     );
   }
@@ -31,86 +33,212 @@ const Products = () => {
         key={item.id}
         to={`/product/${item.id}`}
         className="
-          bg-white
-          rounded-2xl
-          p-5
-          shadow-lg
+          group
+          bg-white/10
+          backdrop-blur-xl
+          border
+          border-white/10
+          rounded-[30px]
+          overflow-hidden
           hover:scale-105
+          hover:border-emerald-400/40
           transition-all
-          duration-300
-          flex
-          flex-col
-          items-center
+          duration-500
+          shadow-2xl
         "
       >
-        <img
-          src={item.image}
-          alt={item.title}
-          className="h-52 w-full object-contain"
-        />
+        {/* Image Section */}
+        <div
+          className="
+            bg-white
+            p-8
+            flex
+            justify-center
+            items-center
+            h-[280px]
+            overflow-hidden
+          "
+        >
+          <img
+            src={item.image}
+            alt={item.title}
+            className="
+              h-[180px]
+              object-contain
+              group-hover:scale-110
+              transition-all
+              duration-500
+            "
+          />
+        </div>
 
-        <h2 className="mt-4 text-black font-semibold text-lg text-center line-clamp-2">
-          {item.title}
-        </h2>
+        {/* Content */}
+        <div className="p-6">
+          <p
+            className="
+              text-emerald-400
+              text-xs
+              uppercase
+              tracking-[3px]
+              font-semibold
+            "
+          >
+            Premium Product
+          </p>
 
-        <p className="mt-3 text-red-500 text-xl font-bold">₹ {item.price}</p>
+          <h2
+            className="
+              mt-4
+              text-white
+              text-xl
+              font-bold
+              line-clamp-2
+              leading-8
+            "
+          >
+            {item.title}
+          </h2>
+
+          <div className="mt-6 flex justify-between items-center">
+            <h3
+              className="
+                text-3xl
+                font-black
+                text-emerald-400
+              "
+            >
+              ₹ {item.price}
+            </h3>
+
+            <span
+              className="
+                px-4
+                py-2
+                rounded-full
+                bg-emerald-500/20
+                text-emerald-300
+                text-sm
+                font-semibold
+              "
+            >
+              In Stock
+            </span>
+          </div>
+        </div>
       </Link>
     );
   });
 
   return (
-    <div className="min-h-screen bg-black p-8">
-      <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
-        <h1 className="text-white text-4xl font-bold">All Products</h1>
+    <div className="min-h-screen bg-black overflow-hidden relative">
+      {/* Background Blur Effects */}
+      <div className="absolute top-[-120px] left-[-120px] h-[350px] w-[350px] bg-emerald-500/20 blur-3xl rounded-full" />
 
-        <div className="flex gap-4 flex-wrap">
-          <button
-            onClick={sortLowToHigh}
-            className="
-              px-5
-              py-3
-              bg-emerald-500
-              rounded-xl
-              text-white
-              font-semibold
-              hover:bg-emerald-600
-              transition-all
-            "
-          >
-            Sort By Price
-          </button>
+      <div className="absolute bottom-[-120px] right-[-120px] h-[350px] w-[350px] bg-blue-500/20 blur-3xl rounded-full" />
 
-          <button
-            onClick={fetchProducts}
-            disabled={loading}
-            className="
-              px-5
-              py-3
-              bg-blue-500
-              rounded-xl
-              text-white
-              font-semibold
-              hover:bg-blue-600
-              transition-all
-              disabled:opacity-50
-            "
-          >
-            {loading ? "Refreshing..." : "Refresh"}
-          </button>
+      {/* Main Content */}
+      <div className="relative z-10 p-8 md:p-14">
+        {/* Header */}
+        <div
+          className="
+            flex
+            flex-col
+            lg:flex-row
+            justify-between
+            items-start
+            lg:items-center
+            gap-8
+            mb-16
+          "
+        >
+          <div>
+            <p
+              className="
+                text-emerald-400
+                uppercase
+                tracking-[5px]
+                text-sm
+                font-semibold
+              "
+            >
+              Modern Collection
+            </p>
+
+            <h1
+              className="
+                mt-4
+                text-white
+                text-5xl
+                md:text-7xl
+                font-black
+                leading-tight
+              "
+            >
+              Explore Products
+            </h1>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex gap-4 flex-wrap">
+            <button
+              onClick={sortLowToHigh}
+              className="
+                px-8
+                py-4
+                rounded-2xl
+                bg-emerald-500
+                text-white
+                font-bold
+                hover:bg-emerald-600
+                hover:scale-105
+                active:scale-95
+                transition-all
+                duration-300
+                shadow-xl
+                shadow-emerald-500/30
+              "
+            >
+              Sort By Price
+            </button>
+
+            <button
+              onClick={fetchProducts}
+              disabled={loading}
+              className="
+                px-8
+                py-4
+                rounded-2xl
+                bg-blue-500
+                text-white
+                font-bold
+                hover:bg-blue-600
+                hover:scale-105
+                active:scale-95
+                transition-all
+                duration-300
+                shadow-xl
+                shadow-blue-500/30
+                disabled:opacity-50
+              "
+            >
+              {loading ? "Refreshing..." : "Refresh"}
+            </button>
+          </div>
         </div>
-      </div>
 
-      <div
-        className="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          md:grid-cols-3
-          lg:grid-cols-4
-          gap-8
-        "
-      >
-        {renderdata}
+        {/* Products Grid */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-3
+            xl:grid-cols-4
+            gap-10
+          "
+        >
+          {renderdata}
+        </div>
       </div>
     </div>
   );
