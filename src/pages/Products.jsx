@@ -19,10 +19,57 @@ const Products = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-black flex justify-center items-center">
-        <h1 className="text-white text-5xl font-black animate-pulse">
-          Loading...
-        </h1>
+      <div className="min-h-screen bg-black p-8 md:p-14">
+        <div className="mb-16">
+          <div className="h-5 w-40 bg-white/10 rounded-full animate-pulse" />
+
+          <div className="h-16 w-[300px] bg-white/10 rounded-2xl mt-6 animate-pulse" />
+        </div>
+
+        <div
+          className="
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-3
+          xl:grid-cols-4
+          gap-10
+        "
+        >
+          {Array(8)
+            .fill(0)
+            .map((_, index) => {
+              return (
+                <div
+                  key={index}
+                  className="
+                  bg-white/10
+                  border
+                  border-white/10
+                  rounded-[30px]
+                  overflow-hidden
+                  animate-pulse
+                "
+                >
+                  <div className="h-[280px] bg-white/10" />
+
+                  <div className="p-6">
+                    <div className="h-4 w-28 bg-white/10 rounded-full" />
+
+                    <div className="h-8 w-full bg-white/10 rounded-xl mt-5" />
+
+                    <div className="h-8 w-2/3 bg-white/10 rounded-xl mt-3" />
+
+                    <div className="flex justify-between items-center mt-8">
+                      <div className="h-10 w-24 bg-white/10 rounded-xl" />
+
+                      <div className="h-10 w-20 bg-white/10 rounded-full" />
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
       </div>
     );
   }
