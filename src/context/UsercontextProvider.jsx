@@ -16,7 +16,9 @@ const UsercontextProvider = ({ children }) => {
 
       const data = await getData();
 
-      setproductData(data);
+      const shuffledData = [...data].sort(() => Math.random() - 0.5);
+
+      setproductData(shuffledData);
     } catch (error) {
       console.log(error);
     } finally {

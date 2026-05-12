@@ -1,5 +1,3 @@
-// Pages/Products.jsx
-
 import React, { useContext, useEffect, useState } from "react";
 import { UsercontextData } from "../context/UsercontextProvider";
 import { Link } from "react-router-dom";
@@ -65,7 +63,7 @@ const Products = () => {
       <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
         <h1 className="text-white text-4xl font-bold">All Products</h1>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap">
           <button
             onClick={sortLowToHigh}
             className="
@@ -86,16 +84,16 @@ const Products = () => {
             onClick={fetchProducts}
             disabled={loading}
             className="
-    px-5
-    py-3
-    bg-blue-500
-    rounded-xl
-    text-white
-    font-semibold
-    hover:bg-blue-600
-    transition-all
-    disabled:opacity-50
-  "
+              px-5
+              py-3
+              bg-blue-500
+              rounded-xl
+              text-white
+              font-semibold
+              hover:bg-blue-600
+              transition-all
+              disabled:opacity-50
+            "
           >
             {loading ? "Refreshing..." : "Refresh"}
           </button>
