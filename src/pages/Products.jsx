@@ -95,27 +95,62 @@ const Products = () => {
         "
       >
         {/* Image Section */}
+        {/* Image Section */}
         <div
           className="
-            bg-white
-            p-8
-            flex
-            justify-center
-            items-center
-            h-[280px]
-            overflow-hidden
-          "
+    relative
+    bg-gradient-to-br
+    from-zinc-900
+    via-black
+    to-zinc-800
+    p-8
+    flex
+    justify-center
+    items-center
+    h-[280px]
+    overflow-hidden
+  "
         >
+          {/* Glow Effect */}
+          <div
+            className="
+      absolute
+      h-[220px]
+      w-[220px]
+      bg-emerald-500/10
+      blur-3xl
+      rounded-full
+    "
+          />
+
+          {/* Top Shine */}
+          <div
+            className="
+      absolute
+      top-0
+      left-0
+      w-full
+      h-full
+      bg-gradient-to-b
+      from-white/5
+      to-transparent
+    "
+          />
+
           <img
             src={item.image}
             alt={item.title}
             className="
-              h-[180px]
-              object-contain
-              group-hover:scale-110
-              transition-all
-              duration-500
-            "
+      relative
+      z-10
+      h-[190px]
+      object-contain
+      group-hover:scale-110
+      group-hover:rotate-2
+      transition-all
+      duration-500
+      drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)]
+    "
           />
         </div>
 
