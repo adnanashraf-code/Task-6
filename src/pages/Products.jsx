@@ -95,7 +95,6 @@ const Products = () => {
         "
       >
         {/* Image Section */}
-        {/* Image Section */}
         <div
           className="
     relative

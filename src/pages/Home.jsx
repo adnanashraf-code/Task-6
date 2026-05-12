@@ -27,7 +27,7 @@ const Home = () => {
       />
 
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-6">
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6">
         <div className="max-w-6xl text-center">
           {/* Badge */}
           <div
@@ -64,7 +64,7 @@ const Home = () => {
             className="
               mt-10
               text-white
-              text-5xl
+              text-[42px]
               sm:text-6xl
               md:text-8xl
               font-black
@@ -133,12 +133,13 @@ const Home = () => {
                 border-white/10
                 backdrop-blur-xl
                 rounded-3xl
-                p-8
+                p-6
+                sm:p-8
               "
             >
-              <h2 className="text-white text-4xl font-black">50+</h2>
+              <h2 className="text-white text-3xl sm:text-4xl font-black">50+</h2>
 
-              <p className="text-gray-400 mt-3">Brands</p>
+              <p className="text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base">Brands</p>
             </div>
 
             <div
@@ -148,12 +149,13 @@ const Home = () => {
                 border-white/10
                 backdrop-blur-xl
                 rounded-3xl
-                p-8
+                p-6
+                sm:p-8
               "
             >
-              <h2 className="text-white text-4xl font-black">10K+</h2>
+              <h2 className="text-white text-3xl sm:text-4xl font-black">10K+</h2>
 
-              <p className="text-gray-400 mt-3">Customers</p>
+              <p className="text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base">Customers</p>
             </div>
 
             <div
@@ -163,12 +165,13 @@ const Home = () => {
                 border-white/10
                 backdrop-blur-xl
                 rounded-3xl
-                p-8
+                p-6
+                sm:p-8
               "
             >
-              <h2 className="text-white text-4xl font-black">24/7</h2>
+              <h2 className="text-white text-3xl sm:text-4xl font-black">24/7</h2>
 
-              <p className="text-gray-400 mt-3">Support</p>
+              <p className="text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base">Support</p>
             </div>
 
             <div
@@ -178,12 +181,13 @@ const Home = () => {
                 border-white/10
                 backdrop-blur-xl
                 rounded-3xl
-                p-8
+                p-6
+                sm:p-8
               "
             >
-              <h2 className="text-white text-4xl font-black">100%</h2>
+              <h2 className="text-white text-3xl sm:text-4xl font-black">100%</h2>
 
-              <p className="text-gray-400 mt-3">Secure</p>
+              <p className="text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base">Secure</p>
             </div>
           </div>
         </div>
